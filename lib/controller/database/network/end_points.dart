@@ -1,8 +1,8 @@
 
 
 // End Points for Auth
-const baseUrl = 'https://workshop.orangedigitalcenteregypt.com/api/v1/';
-const loginEndPoint = 'login';
+const baseUrl = 'https://movieapi.orangedigitalcenteregypt.com';
+const loginEndPoint = 'auth/login';
 const registerEndPoint = 'register';
 const universityEndPoint = 'university';
 const gradeEndPoint = 'grade';

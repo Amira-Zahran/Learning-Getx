@@ -8,15 +8,24 @@ import 'database/local/shared_prefrences/string/access.dart';
 import 'database/network/dio_helper.dart';
 import 'database/network/end_points.dart';
 
-class LoginController extends GetxController{
+class LoginController extends GetxController {
 
   int count = 0;
-  void increment() {
+
+  increment() {
     count++;
     update();
   }
 
-  TextEditingController emailController = TextEditingController();
+
+  decrement() {
+    if(count>=0){
+      count--;
+    }
+    update();
+  }
+
+/* TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
 
   LoginModel? loginModel;
@@ -55,5 +64,7 @@ class LoginController extends GetxController{
     });
   }
 
+
+*/
 
 }

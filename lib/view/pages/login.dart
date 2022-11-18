@@ -1,3 +1,4 @@
+/*
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx/controller/controller.dart';
@@ -44,10 +45,12 @@ class Login extends StatelessWidget {
                         const SizedBox(height: 40,),
                         Center(
                           child: ElevatedButton(onPressed: (){
-                            controller.login();
+                            //controller.login();
                             if(_formKey.currentState!.validate()){
                               return;
                             }
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=> Home()));
+                            // Get.to(Home());
                           },
                             style: ElevatedButton.styleFrom(
                                 backgroundColor: Colors.deepOrange,
@@ -76,7 +79,8 @@ class Login extends StatelessWidget {
                             ),
                             child: TextButton(
                               onPressed: (){
-                                Navigator.push(context, MaterialPageRoute(builder: (context)=> const Home()));
+                                //Get.to(Home());
+                                 Navigator.push(context, MaterialPageRoute(builder: (context)=> Home()));
                               },
                               child: const Text('Sign Up', style: TextStyle(
                                 color: Colors.deepOrange,
@@ -97,3 +101,4 @@ class Login extends StatelessWidget {
     );
   }
 }
+*/
