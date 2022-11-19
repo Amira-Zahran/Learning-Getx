@@ -2,11 +2,12 @@ import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../core/database/local/hive/string/access.dart';
+import '../core/database/network/dio_helper.dart';
+import '../core/database/network/end_points.dart';
+import '../main.dart';
 import '../model/login_model.dart';
-import 'database/local/shared_prefrences/preference_utils.dart';
-import 'database/local/shared_prefrences/string/access.dart';
-import 'database/network/dio_helper.dart';
-import 'database/network/end_points.dart';
+import '../view/pages/bank_account.dart';
 
 class LoginController extends GetxController {
 
@@ -25,7 +26,7 @@ class LoginController extends GetxController {
     update();
   }
 
-/* TextEditingController emailController = TextEditingController();
+ TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
 
   LoginModel? loginModel;
@@ -38,7 +39,7 @@ class LoginController extends GetxController {
     isPassword = !isPassword;
     update();
   }
-  void decrement(){
+  void select(){
     selected = !selected;
     update();
   }
@@ -53,7 +54,8 @@ class LoginController extends GetxController {
       loginModel = LoginModel.fromJson(value.data);
       accessToken = loginModel!.data!.accessToken.toString();
       accessToken = value.data['data']['accessToken'];
-      PreferenceUtils.setString(SharedKeys.apiToken, accessToken);
+     // PreferenceUtils.setString(SharedKeys.apiToken, accessToken);
+      //box!.put('bankAccount', BankAccount(currency: accessToken, myMoney: 1000000));
       update();
     }).catchError((error){
       print(error);
@@ -65,6 +67,5 @@ class LoginController extends GetxController {
   }
 
 
-*/
 
 }
